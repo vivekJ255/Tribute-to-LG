@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Account LG </title>
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                <a href="index.html"><img src="pngfind.com-lg-logo-png-99494.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="account.html">ACCOUNT</a></li>
+                        <li><a href="product.html">PRODUCT</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                </nav>
+                <img src="menulogo.png" class="menu-icon" onclick="menutoggle()">
+
+                </div>
+
+            </div>
+        </div>
+
+      <!----Account page-->
+      <div class="account-page">
+          <div class="container">
+              <div class="row">
+                  <div class="col-2">
+                      <video width="720px" height="450px" controls>
+                      <source src="211250461_1044493562621203_1614230284976023691_n.mp4" type="video/mp4">
+                      </video>
+                  </div>
+                  <div class="col-2">
+                      <div class="form-container">
+                          <div class="form-btn">
+                              <span onclick="login()">Login</span>
+                              <span onclick="register()">Register</span>
+                              <hr id="Indicator">
+                          </div>
+
+                          <form id="LoginForm">
+                              <input type="text" placeholder="Username">
+                              <input type="password" placeholder="Password">
+                              <button type="submit" class="btn">Login</button>
+                              <a href="">Forgot Password</a>
+                          </form>
+
+                          <form id="RegForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Enter Your E-mail">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                      </div>
+                    </div>
+              </div>
+          </div>
+      </div>
+
+       <!------Footer---->
+       <footer class="footer">
+        <div class="small-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="about.html">about us</a></li>
+                        <li><a href="https://www.lg.com/in/about-lg">our services</a></li>
+                        <li><a href="https://www.lg.com/in/about-lg">privacy policy</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="https://www.lg.com/in/support">FAQ</a></li>
+                        <li><a href="https://www.lg.com/in/support">shipping</a></li>
+                        <li><a href="https://www.lg.com/in/support">returns</a></li>
+                        <li><a href="https://www.lg.com/in/support">order status</a></li>
+                        <li><a href="https://www.lg.com/in/support">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/LGIndiaPage/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/lgindia"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/lg_india/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/vivek-j-a21995213"><i class="fab fa-linkedin-in"></i></a>
+                    </div> 
+                </div>
+                <h3 style="padding: 50px; color:white;">Copyright © 2009-2021 LG Electronics. All Rights Reserved (Created By J Vivek and Team)</h3>
+            </div>
+        </div>
+   </footer>
+   
+   
+   <script>
+       var MenuItems = document.getElementById("MenuItems");
+       MenuItems.style.maxHeight = "0px";
+       function menutoggle(){
+           if(MenuItems.style.maxHeight == "0px")
+           {
+            MenuItems.style.maxHeight = "200px";
+           }
+           else
+           {
+            MenuItems.style.maxHeight = "0px";
+           }
+       }
+   </script>
+
+   <!------js for toggle form---->
+   <script>
+       var LoginForm = document.getElementById("LoginForm");
+       var RegForm = document.getElementById("RegForm");
+       var Indicator = document.getElementById("Indicator");
+
+       function register(){
+           RegForm.style.transform = "translateX(0px)";
+           LoginForm.style.transform = "translateX(0px)";
+           Indicator.style.transform = "translateX(100px)";
+       }
+       function login(){
+           RegForm.style.transform = "translateX(300px)";
+           LoginForm.style.transform = "translateX(300px)";
+           Indicator.style.transform = "translateX(0px)";
+       }
+   </script>
+ </body>
+</html>
